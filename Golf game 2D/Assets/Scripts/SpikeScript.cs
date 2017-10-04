@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class SpikeScript : MonoBehaviour {
 
     //int iCollisions = 0;
+    public GameObject SpawnController;
 
     Vector3 vLocalUp;
     // Use this for initialization
@@ -22,12 +23,12 @@ public class SpikeScript : MonoBehaviour {
     {
         if (collision.tag == "Player")
         {
-            collision.gameObject.transform.position = GameObject.Find("SpawnPoint").transform.position;
+            collision.gameObject.transform.position = GameObject.Find(SpawnController.GetComponent<SpawnScript>().SpawnPlayer1).transform.position;
         }
 
         if (collision.tag == "Player2")
         {
-            collision.gameObject.transform.position = GameObject.Find("SpawnPoint2").transform.position;
+            collision.gameObject.transform.position = GameObject.Find(SpawnController.GetComponent<SpawnScript>().SpawnPlayer2).transform.position;
         }
 
         collision.gameObject.GetComponent<PlayerController>().vLolImGoingToMakeTheForceZeroSoDaNiggaDunRunOffDaFukinEdgeLolFukinBallDontKnowHowToStandStill();

@@ -16,10 +16,7 @@ public class ShowScoreScript : MonoBehaviour {
     // Use this for initialization
     void Start () {
         Debug.Log(ScoreScript.iCremeScore);
-    }
-	
-	// Update is called once per frame
-	void Update () {
+
         if (ScoreScript.iBlueScore == 0)
         {
             BlueScore.GetComponent<SpriteRenderer>().sprite = zero;
@@ -53,6 +50,14 @@ public class ShowScoreScript : MonoBehaviour {
         {
             CremeScore.GetComponent<SpriteRenderer>().sprite = three;
         }
+
+        ScoreScript.iBlueScore = 0;
+        ScoreScript.iCremeScore = 0;
+    }
+	
+	// Update is called once per frame
+	void Update () {
+        
     }
 
     void vGetScores()

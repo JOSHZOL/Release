@@ -21,7 +21,7 @@ public class FinishScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         fTimePassed += Time.deltaTime;
-		if (bPlayer1 && bPlayer2)
+		if (bPlayer1 || bPlayer2)
         {   
             if (fTimePassed > 1.5f)
             {
