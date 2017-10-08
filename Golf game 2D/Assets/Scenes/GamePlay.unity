@@ -370,13 +370,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1d14d9594c924c469a5a34a9a76a660, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainCamera: {fileID: 1983904464}
+  power: {fileID: 537271872}
+  rb: {fileID: 142131794}
   dead: 0
   force: 0
   bJumpReady: 0
   jumpButton: k
   bCanMove: 1
-  power: {fileID: 537271872}
-  rb: {fileID: 142131794}
 --- !u!1001 &169065969
 Prefab:
   m_ObjectHideFlags: 0
@@ -2725,13 +2726,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1d14d9594c924c469a5a34a9a76a660, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainCamera: {fileID: 1983904464}
+  power: {fileID: 959753343}
+  rb: {fileID: 1291991139}
   dead: 0
   force: 0
   bJumpReady: 0
   jumpButton: s
   bCanMove: 1
-  power: {fileID: 959753343}
-  rb: {fileID: 1291991139}
 --- !u!58 &1291991141
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -3,38 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SpikeScript : MonoBehaviour {
+public class SpikeScript : MonoBehaviour
+{
+    GameObject goPlayer;
+    //Vector3 vLocalUp;
+    
+    float fDeathTimer;
 
-    //int iCollisions = 0;
     public GameObject SpawnController;
     public GameObject deathPartical;
 
-    GameObject goPlayer;
-
-    bool bStartDead;
-    float fDeathTimer;
-     
-    Vector3 vLocalUp;
     // Use this for initialization
-    void Start () {
-        vLocalUp = transform.up;
-        bStartDead = false;
+    void Start ()
+    {
+        //vLocalUp = transform.up;
         fDeathTimer = 0.05f;
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-	    if (bStartDead == true)
+        if (goPlayer != null)
         {
-            fDeathTimer -= Time.deltaTime;
-        }
+            if (goPlayer.GetComponent<PlayerController>().dead)
+            {
+                fDeathTimer -= Time.deltaTime;
+            }
 
-        if (fDeathTimer <= 0.0f)
-        {
-            bStartDead = false;
-            goPlayer.GetComponent<PlayerController>().dead = false;
-            fDeathTimer = 0.05f;
+            if (fDeathTimer <= 0.0f)
+            {
+                goPlayer.GetComponent<PlayerController>().dead = false;
+                fDeathTimer = 0.05f;
+            }
         }
 	}
 
@@ -44,9 +44,8 @@ public class SpikeScript : MonoBehaviour {
         {
             Instantiate(deathPartical, collision.transform.position, Quaternion.identity);
 
-            collision.gameObject.GetComponent<PlayerController>().vLolImGoingToMakeTheForceZeroSoDaNiggaDunRunOffDaFukinEdgeLolFukinBallDontKnowHowToStandStill();
+            collision.gameObject.GetComponent<PlayerController>().vStayStill();
             collision.gameObject.GetComponent<PlayerController>().dead = true;
-            bStartDead = true;
 
             goPlayer = collision.gameObject;
 
