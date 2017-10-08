@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-
 public class PlayerController : MonoBehaviour {
 
     bool pressed;
-    
+
+    public bool dead;
     public int force;
     public bool bJumpReady = false;
     public string jumpButton;
@@ -25,6 +24,7 @@ public class PlayerController : MonoBehaviour {
         force = 100;
         pressed = false;
         bJumpReady = true;
+        dead = false;
     }
 
     public void vLolImGoingToMakeTheForceZeroSoDaNiggaDunRunOffDaFukinEdgeLolFukinBallDontKnowHowToStandStill()
