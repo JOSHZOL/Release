@@ -109,7 +109,7 @@ public class PlayerController : MonoBehaviour {
     void StopShaking()
     {
         CancelInvoke("CameraShake");
-        mainCamera.transform.position = new Vector3(mainCamera.transform.position.x, startY, mainCamera.transform.position.z);
+        //mainCamera.transform.position = new Vector3(mainCamera.transform.position.x, startY, mainCamera.transform.position.z);
     }
 }
 
