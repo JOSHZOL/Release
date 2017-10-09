@@ -78,23 +78,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\MoveScript.cs" />
-    <Compile Include="Assets\ScoreScript.cs" />
     <Compile Include="Assets\Scripts\CameraScript.cs" />
     <Compile Include="Assets\Scripts\FanScript.cs" />
     <Compile Include="Assets\Scripts\FinishScript.cs" />
     <Compile Include="Assets\Scripts\HowToPlayButton.cs" />
     <Compile Include="Assets\Scripts\MenuButton.cs" />
+    <Compile Include="Assets\Scripts\MoveScript.cs" />
     <Compile Include="Assets\Scripts\PlatformScript.cs" />
     <Compile Include="Assets\Scripts\PlayButton.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\QuitButton.cs" />
+    <Compile Include="Assets\Scripts\ScoreScript.cs" />
     <Compile Include="Assets\Scripts\SettingsButton.cs" />
+    <Compile Include="Assets\Scripts\ShowScoreScript.cs" />
     <Compile Include="Assets\Scripts\SpawnScript.cs" />
     <Compile Include="Assets\Scripts\SpikeScript.cs" />
     <Compile Include="Assets\Scripts\TrapPlatScript.cs" />
-    <Compile Include="Assets\ShowScoreScript.cs" />
-    <Compile Include="Assets\dontDie.cs" />
+    <Compile Include="Assets\Scripts\dontDie.cs" />
+    <Compile Include="Assets\UIScoreScript.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

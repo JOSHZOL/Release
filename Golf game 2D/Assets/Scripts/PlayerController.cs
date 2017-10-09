@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour {
     bool pressed;
     float fTimePassed;
     float shakeAmt;
-    float startY;
+    //float startY;
 
     public Camera mainCamera;
     public Slider power;
@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour {
         bJumpReady = true;
         dead = false;
         shakeAmt = 0;
-        startY = mainCamera.transform.position.y;
+        //startY = mainCamera.transform.position.y;
     }
 
     public void vStayStill()
