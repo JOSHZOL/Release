@@ -12,8 +12,10 @@ public class TrapPlatScript : MonoBehaviour {
     public BoxCollider2D daBox;
     public Sprite platLight;
     public Sprite platDark;
-	// Use this for initialization
-	void Start () {
+
+    public GameObject particles;
+    // Use this for initialization
+    void Start () {
 		
 	}
 
@@ -32,6 +34,7 @@ public class TrapPlatScript : MonoBehaviour {
         }
         if (fTimePassed >= fTimeDrop + fTimeRespawn)
         {
+            particles.SetActive(false);
             daBox.enabled = true;
             isTrue = false;
             fTimePassed = 0.0f;
@@ -43,5 +46,6 @@ public class TrapPlatScript : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D collision)
     {
         isTrue = true;
+        particles.SetActive(true);
     }
 }

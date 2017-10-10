@@ -5057,9 +5057,10 @@ MonoBehaviour:
   Player1: {fileID: 142131790}
   Player2: {fileID: 1291991135}
   cam: {fileID: 1983904464}
-  camSpeed: 20
   fSize: 4.6
   fDivide: 4
+  fInitialCamSpeed: 0.3
+  fFinalCamSpeed: 20
 --- !u!1001 &2000725649
 Prefab:
   m_ObjectHideFlags: 0

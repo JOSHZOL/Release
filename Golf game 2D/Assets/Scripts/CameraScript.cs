@@ -7,12 +7,19 @@ public class CameraScript : MonoBehaviour {
     public GameObject Player1;
     public GameObject Player2;
     public Camera cam;
-    public float camSpeed;
+    
     public float fSize;
     public float fDivide;
-
-    Vector3 positionToMoveTo;
     
+    Vector3 positionToMoveTo;
+
+    float fStartTime = 0.0f;
+    public float fInitialCamSpeed;
+    public float fFinalCamSpeed;
+
+    float fCamSpeed;
+    float fProximitySlowDown;
+    float fProximityNumba2;
     float fDistanceX;
     float fDistanceY;
 
@@ -22,13 +29,25 @@ public class CameraScript : MonoBehaviour {
     float fSizeDifference;
     float ShrinkMultiplier;
     float camSize;
+
     // Use this for initialization
     void Start () {
-	    	
-	}
+        fCamSpeed = fInitialCamSpeed;
+        fProximitySlowDown = 10;
+        fProximityNumba2 = fProximitySlowDown;
+    }
 	
 	// Update is called once per frame
 	void Update () {
+
+        fStartTime += Time.deltaTime;
+
+        if(cam.transform.position.x <= positionToMoveTo.x)
+        {
+            fCamSpeed = fFinalCamSpeed;
+            fProximitySlowDown = 1000;
+            fProximityNumba2 = 400;
+        }
 
         // distance between players X
         if (Player1.transform.position.x > Player2.transform.position.x)
@@ -106,9 +125,9 @@ public class CameraScript : MonoBehaviour {
         }
 
         // change x move speed
-        if (fDistanceX < 1000)
+        if (fDistanceX < fProximitySlowDown)
         {
-            SpeedMultiplierX = fDistanceX / 400;
+            SpeedMultiplierX = fDistanceX / fProximityNumba2;
         }
         else
         {
@@ -128,21 +147,21 @@ public class CameraScript : MonoBehaviour {
         // change x camera position
         if (positionToMoveTo.x < cam.transform.position.x)
         {
-            cam.transform.position = cam.transform.position - (transform.right * camSpeed * SpeedMultiplierX);
+            cam.transform.position = cam.transform.position - (transform.right * fCamSpeed * SpeedMultiplierX);
         }
         else if (positionToMoveTo.x > cam.transform.position.x)
         {
-            cam.transform.position = cam.transform.position + (transform.right * camSpeed * SpeedMultiplierX);
+            cam.transform.position = cam.transform.position + (transform.right * fCamSpeed * SpeedMultiplierX);
         }
 
         // same for y
         if (positionToMoveTo.y < cam.transform.position.y)
         {
-            cam.transform.position = cam.transform.position - (transform.up * camSpeed * SpeedMultiplierY);
+            cam.transform.position = cam.transform.position - (transform.up * fCamSpeed * SpeedMultiplierY);
         }
         else if (positionToMoveTo.y > cam.transform.position.y)
         {
-            cam.transform.position = cam.transform.position + (transform.up * camSpeed * SpeedMultiplierY);
+            cam.transform.position = cam.transform.position + (transform.up * fCamSpeed * SpeedMultiplierY);
         }
     }
 }
