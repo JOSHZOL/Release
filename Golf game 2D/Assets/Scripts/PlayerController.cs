@@ -13,9 +13,11 @@ public class PlayerController : MonoBehaviour {
     public Camera mainCamera;
     public Slider power;
     public Rigidbody2D rb;
+    public GameObject sugarDrop;
 
     public bool dead;
     public int force;
+    public int sugarForce;
     public bool bJumpReady = false;
     public string jumpButton;
     public bool bCanMove = true;
@@ -84,7 +86,16 @@ public class PlayerController : MonoBehaviour {
 
             power.value = force;
         }
-
+        else if (!bJumpReady && bCanMove && rb != null)
+        {
+            if (Input.GetKeyUp(jumpButton))
+            {
+                Instantiate(sugarDrop, transform.position, Quaternion.identity);
+                //sugarDrop.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+                sugarDrop.GetComponent<Rigidbody2D>().AddForce(Vector3.down * sugarForce);
+            }
+        }
+        
         if (dead)
         {
             shakeAmt = 4 * .0045f;

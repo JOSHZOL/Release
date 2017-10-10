@@ -347,7 +347,7 @@ GameObject:
   - component: {fileID: 142131791}
   - component: {fileID: 142131794}
   - component: {fileID: 142131795}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RedBall
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -456,8 +456,10 @@ MonoBehaviour:
   mainCamera: {fileID: 1983904464}
   power: {fileID: 910943206}
   rb: {fileID: 142131794}
+  sugarDrop: {fileID: 1565515960703266, guid: 5556c40eb581a074d8ed65a3c6c59473, type: 2}
   dead: 0
   force: 0
+  sugarForce: 0
   bJumpReady: 0
   jumpButton: k
   bCanMove: 1
@@ -3302,7 +3304,7 @@ GameObject:
   - component: {fileID: 1291991139}
   - component: {fileID: 1291991140}
   - component: {fileID: 1291991141}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BlueBall
   m_TagString: Player2
   m_Icon: {fileID: 0}
@@ -3411,8 +3413,10 @@ MonoBehaviour:
   mainCamera: {fileID: 1983904464}
   power: {fileID: 928092332}
   rb: {fileID: 1291991139}
+  sugarDrop: {fileID: 1565515960703266, guid: 5556c40eb581a074d8ed65a3c6c59473, type: 2}
   dead: 0
   force: 0
+  sugarForce: 0
   bJumpReady: 0
   jumpButton: s
   bCanMove: 1

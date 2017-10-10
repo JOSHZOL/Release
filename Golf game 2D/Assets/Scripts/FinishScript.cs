@@ -33,30 +33,28 @@ public class FinishScript : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.tag == "Player" || collision.tag == "Player2")
         {
             if (bTouched == false)
             {
                 particles.SetActive(true);
                 bTouched = true;
-                GameObject.Find("Score").GetComponent<ScoreScript>().iAddScore(false);
+
+                if (collision.tag == "Player2")
+                {
+                    GameObject.Find("Score").GetComponent<ScoreScript>().iAddScore(true);
+                }
+                else
+                {
+                    GameObject.Find("Score").GetComponent<ScoreScript>().iAddScore(false);
+                }
             }
+
             fTimePassed = 0.0f;
             bPlayer1 = true;
-        }
 
-        if (collision.tag == "Player2")
-        {
-            if (bTouched == false)
-            {
-                particles.SetActive(true);
-                bTouched = true;
-                GameObject.Find("Score").GetComponent<ScoreScript>().iAddScore(true);
-            }
-            fTimePassed = 0.0f;
-            bPlayer2 = true;
+            collision.gameObject.GetComponent<PlayerController>().bCanMove = false;
+            collision.gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         }
-        collision.gameObject.GetComponent<PlayerController>().bCanMove = false;
-        collision.gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
     }
 }

@@ -40,24 +40,31 @@ public class SpikeScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<PlayerController>().dead == false)
+        if (collision.tag == "Player" || collision.tag == "Player2")
         {
-            Instantiate(deathPartical, collision.transform.position, Quaternion.identity);
-
-            collision.gameObject.GetComponent<PlayerController>().vStayStill();
-            collision.gameObject.GetComponent<PlayerController>().dead = true;
-
-            goPlayer = collision.gameObject;
-
-            if (collision.tag == "Player")
+            if (collision.gameObject.GetComponent<PlayerController>().dead == false)
             {
-                collision.gameObject.transform.position = GameObject.Find(SpawnController.GetComponent<SpawnScript>().SpawnPlayer1).transform.position;
-            }
+                Instantiate(deathPartical, collision.transform.position, Quaternion.identity);
 
-            if (collision.tag == "Player2")
-            {
-                collision.gameObject.transform.position = GameObject.Find(SpawnController.GetComponent<SpawnScript>().SpawnPlayer2).transform.position;
+                collision.gameObject.GetComponent<PlayerController>().vStayStill();
+                collision.gameObject.GetComponent<PlayerController>().dead = true;
+
+                goPlayer = collision.gameObject;
+
+                if (collision.tag == "Player")
+                {
+                    collision.gameObject.transform.position = GameObject.Find(SpawnController.GetComponent<SpawnScript>().SpawnPlayer1).transform.position;
+                }
+
+                if (collision.tag == "Player2")
+                {
+                    collision.gameObject.transform.position = GameObject.Find(SpawnController.GetComponent<SpawnScript>().SpawnPlayer2).transform.position;
+                }
             }
+        }
+        else
+        {
+            Destroy(collision.gameObject);
         }
     }
 }
