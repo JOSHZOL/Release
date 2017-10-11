@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour {
         bJumpReady = true;
         dead = false;
         shakeAmt = 0;
+        fTimePassed = 0;
         //startY = mainCamera.transform.position.y;
     }
 
@@ -61,14 +62,25 @@ public class PlayerController : MonoBehaviour {
                 transform.Rotate(Vector3.back * (100 * Time.deltaTime));
             }
         } 
+        
+        if (GetComponent<Animator>().GetBool("Land"))
+        {
+            fTimePassed += Time.deltaTime;
+        }
 
-        fTimePassed += Time.deltaTime; 
+        if (fTimePassed > 0.5f)
+        {
+            GetComponent<Animator>().SetBool("Land", false);
+            fTimePassed = 0.0f;
+        }
 
         if (bJumpReady && bCanMove && rb != null)
         {
             if (Input.GetKeyDown(jumpButton))
             {
                 pressed = true;
+
+                GetComponent<Animator>().SetBool("Charge", true);
             }
 
             if (pressed && force <= 260)
@@ -82,6 +94,8 @@ public class PlayerController : MonoBehaviour {
                 force = 100;
                 pressed = false;
                 bJumpReady = false;
+
+                GetComponent<Animator>().SetBool("Charge", false);
             }
 
             power.value = force;

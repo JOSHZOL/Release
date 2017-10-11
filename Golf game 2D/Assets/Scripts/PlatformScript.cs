@@ -22,6 +22,7 @@ public class PlatformScript : MonoBehaviour {
         if (collision.tag == "Player" || collision.tag == "Player2")
         {
             collision.gameObject.GetComponent<PlayerController>().bJumpReady = true;
+            collision.gameObject.GetComponent<Animator>().SetBool("Land", true);
         }
     }
 }
