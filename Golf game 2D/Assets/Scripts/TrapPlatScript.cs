@@ -12,7 +12,7 @@ public class TrapPlatScript : MonoBehaviour {
     public BoxCollider2D daBox;
     public Sprite platLight;
     public Sprite platDark;
-
+    public AudioSource rocks;
     public GameObject particles;
     // Use this for initialization
     void Start () {
@@ -45,6 +45,7 @@ public class TrapPlatScript : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        rocks.Play();
         isTrue = true;
         particles.SetActive(true);
     }

@@ -12,7 +12,7 @@ public class SpikeScript : MonoBehaviour
 
     public GameObject SpawnController;
     public GameObject deathPartical;
-
+    public AudioSource death;
     // Use this for initialization
     void Start ()
     {
@@ -54,11 +54,13 @@ public class SpikeScript : MonoBehaviour
                 if (collision.tag == "Player")
                 {
                     collision.gameObject.transform.position = GameObject.Find(SpawnController.GetComponent<SpawnScript>().SpawnPlayer1).transform.position;
+                    death.Play();
                 }
 
                 if (collision.tag == "Player2")
                 {
                     collision.gameObject.transform.position = GameObject.Find(SpawnController.GetComponent<SpawnScript>().SpawnPlayer2).transform.position;
+                    death.Play();
                 }
             }
         }

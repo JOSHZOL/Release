@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour {
     public Slider power;
     public Rigidbody2D rb;
     public GameObject sugarDrop;
+    public AudioSource Jump;
 
     public bool dead;
     public int force;
@@ -90,6 +91,7 @@ public class PlayerController : MonoBehaviour {
 
             if (Input.GetKeyUp(jumpButton))
             {
+                Jump.Play();
                 rb.AddForce(Vector3.right * force + Vector3.up * force);
                 force = 100;
                 pressed = false;

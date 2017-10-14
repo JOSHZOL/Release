@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class PlatformScript : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public AudioSource Landing;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -16,9 +18,9 @@ public class PlatformScript : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        print("Hit platform");
+        Landing.Play();
         //collision.gameObject.transform.localScale = new Vector3(0.43f, 0.43f, 1.0f);
-
+    
         if (collision.tag == "Player" || collision.tag == "Player2")
         {
             collision.gameObject.GetComponent<PlayerController>().bJumpReady = true;

@@ -9,6 +9,7 @@ public class FinishScript : MonoBehaviour {
     bool bPlayer2 = false;
     bool bTouched = false;
     public GameObject particles;
+    public AudioSource win;
 
     public string sceneToChangeTo;
     float fTimePassed = 0.0f;
@@ -38,6 +39,7 @@ public class FinishScript : MonoBehaviour {
             if (bTouched == false)
             {
                 particles.SetActive(true);
+                win.Play();
                 bTouched = true;
 
                 if (collision.tag == "Player2")
