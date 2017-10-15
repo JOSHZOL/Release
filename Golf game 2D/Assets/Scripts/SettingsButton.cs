@@ -5,19 +5,33 @@ using UnityEngine.SceneManagement;
 
 public class SettingsButton : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    SpriteRenderer srSpriteRenderer;
+
+    public Sprite Highlighted;
+    public Sprite Unhighlighted;
+
+    // Use this for initialization
+    void Start () {
+        srSpriteRenderer = GetComponent<SpriteRenderer>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
 
+    private void OnMouseEnter()
+    {
+        srSpriteRenderer.sprite = Highlighted;
+    }
+
+    private void OnMouseExit()
+    {
+        srSpriteRenderer.sprite = Unhighlighted;
+    }
+
     private void OnMouseDown()
     {
-        print("Pressed Settings");
         SceneManager.LoadScene("Settings");
     }
 }

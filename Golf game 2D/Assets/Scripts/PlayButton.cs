@@ -5,9 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class PlayButton : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
+    public Sprite Highlighted;
+    public Sprite Unhighlighted;
+
+    SpriteRenderer srSpriteRenderer;
+  
+    // Use this for initialization
+
+    void Start ()
+    {
+        srSpriteRenderer = GetComponent<SpriteRenderer>();
 	}
 	
 	// Update is called once per frame
@@ -15,9 +22,18 @@ public class PlayButton : MonoBehaviour {
 		
 	}
 
+    public void OnMouseEnter()
+    {
+        srSpriteRenderer.sprite = Highlighted;
+    }
+
+    public void OnMouseExit()
+    {
+        srSpriteRenderer.sprite = Unhighlighted;
+    }
+
     private void OnMouseDown()
     {
-        print("Pressed Play");
-        SceneManager.LoadScene("GamePlay");
+        SceneManager.LoadScene("PlayChoice");
     }
 }
