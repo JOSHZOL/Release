@@ -4,9 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class FinishScript : MonoBehaviour {
-
-    bool bPlayer1 = false;
-    bool bPlayer2 = false;
+    
     public bool bTouched = false;
     public GameObject particles;
     public AudioSource win;
@@ -20,13 +18,14 @@ public class FinishScript : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-        fTimePassed += Time.deltaTime;
-		if (bPlayer1 || bPlayer2)
-        {   
-            if (fTimePassed > 1.5f)
+	void Update ()
+    {    
+		if (bTouched)
+        {
+            fTimePassed += Time.deltaTime;
+
+            if (fTimePassed > 2.5f)
             {
-                print("Finished");
                 SceneManager.LoadScene(sceneToChangeTo);
             }
         }
@@ -52,12 +51,10 @@ public class FinishScript : MonoBehaviour {
                 }
             }
 
-            fTimePassed = 0.0f;
-            bPlayer1 = true;
-
             collision.gameObject.GetComponent<PlayerController>().bCanMove = false;
             collision.gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             collision.gameObject.GetComponent<Animator>().SetBool("Land", true);
+            collision.gameObject.GetComponent<PlayerController>().bJumpReady = true;
         }
     }
 }

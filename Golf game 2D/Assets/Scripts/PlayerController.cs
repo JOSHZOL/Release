@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour {
 
     bool pressed;
     float fTimePassed;
+    float fDelay;
     float shakeAmt;
     //float startY;
 
@@ -31,7 +32,8 @@ public class PlayerController : MonoBehaviour {
         bJumpReady = true;
         dead = false;
         shakeAmt = 0;
-        fTimePassed = 0;
+        fTimePassed = 0.0f;
+        fDelay = 0.0f;
         //startY = mainCamera.transform.position.y;
     }
 
@@ -43,36 +45,45 @@ public class PlayerController : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (transform.eulerAngles.z < 1.01f && transform.eulerAngles.z > -1.01)
-        {
+        //if (transform.eulerAngles.z < 1.01f && transform.eulerAngles.z > -1.01)
+        //{
 
-        }
-        else
-        {
-            if (transform.eulerAngles.z > 360.0f || transform.eulerAngles.z < -360)
-            {
-                transform.Rotate(0, 0, 0);
-            }
+        //}
+        //else
+        //{
+        //    if (transform.eulerAngles.z > 360.0f || transform.eulerAngles.z < -360)
+        //    {
+        //        transform.Rotate(0, 0, 0);
+        //    }
 
-            if (transform.eulerAngles.z > 180.01f)
-            {
-                transform.Rotate(Vector3.forward * (100 * Time.deltaTime));
-            }
-            else if (transform.eulerAngles.z < 180.01f)
-            {
-                transform.Rotate(Vector3.back * (100 * Time.deltaTime));
-            }
-        } 
+        //    if (transform.eulerAngles.z > 180.01f)
+        //    {
+        //        transform.Rotate(Vector3.forward * (100 * Time.deltaTime));
+        //    }
+        //    else if (transform.eulerAngles.z < 180.01f)
+        //    {
+        //        transform.Rotate(Vector3.back * (100 * Time.deltaTime));
+        //    }
+        //} 
         
         if (GetComponent<Animator>().GetBool("Land"))
         {
             fTimePassed += Time.deltaTime;
         }
 
+        fDelay += Time.deltaTime;
+
         if (fTimePassed > 0.5f)
         {
             GetComponent<Animator>().SetBool("Land", false);
             fTimePassed = 0.0f;
+        }
+
+        if (!bCanMove && bJumpReady && fDelay > 1.0f)
+        {
+            rb.AddForce(Vector3.up * force);
+            bJumpReady = false;
+            fDelay = 0.0f;
         }
 
         if (bJumpReady && bCanMove && rb != null)
