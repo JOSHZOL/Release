@@ -5,19 +5,36 @@ using UnityEngine.SceneManagement;
 
 public class MenuButton : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    public Sprite Highlighted;
+    public Sprite Unhighlighted;
+
+    SpriteRenderer srSpriteRenderer;
+
+    // Use this for initialization
+
+    void Start ()
+    {
+        srSpriteRenderer = GetComponent<SpriteRenderer>();
+    }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 		
 	}
 
+    public void OnMouseEnter()
+    {
+        srSpriteRenderer.sprite = Highlighted;
+    }
+
+    public void OnMouseExit()
+    {
+        srSpriteRenderer.sprite = Unhighlighted;
+    }
+
     private void OnMouseDown()
     {
-        print("Pressed Menu");
         SceneManager.LoadScene("Menu");
     }
 }
