@@ -100,6 +100,7 @@
     <Compile Include="Assets\Scripts\TrapPlatScript.cs" />
     <Compile Include="Assets\Scripts\UIScoreScript.cs" />
     <Compile Include="Assets\Scripts\dontDie.cs" />
+    <Compile Include="Assets\menuQuitButton.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

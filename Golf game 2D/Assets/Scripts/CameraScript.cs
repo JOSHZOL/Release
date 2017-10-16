@@ -7,6 +7,8 @@ public class CameraScript : MonoBehaviour {
     public GameObject Player1;
     public GameObject Player2;
     public Camera cam;
+
+    public GameObject finishLine;
     
     public float fSize;
     public float fDivide;
@@ -49,27 +51,37 @@ public class CameraScript : MonoBehaviour {
             fProximityNumba2 = 400;
         }
 
-        // distance between players X
-        if (Player1.transform.position.x > Player2.transform.position.x)
+        if (finishLine.GetComponent<FinishScript>().bTouched == false)
         {
-            fDistanceX = Player1.transform.position.x - Player2.transform.position.x;
+            // distance between players X
+            if (Player1.transform.position.x > Player2.transform.position.x)
+            {
+                fDistanceX = Player1.transform.position.x - Player2.transform.position.x;
+            }
+            else
+            {
+                fDistanceX = Player2.transform.position.x - Player1.transform.position.x;
+            }
+
+            // distance between players Y
+            if (Player1.transform.position.y > Player2.transform.position.y)
+            {
+                fDistanceY = Player1.transform.position.y - Player2.transform.position.y;
+            }
+            else
+            {
+                fDistanceY = Player2.transform.position.y - Player1.transform.position.y;
+            }
+
+            positionToMoveTo = new Vector3((Player1.transform.position.x + Player2.transform.position.x) / 2 + 4, (Player1.transform.position.y + Player2.transform.position.y) / 2, -10);
         }
         else
         {
-            fDistanceX =  Player2.transform.position.x - Player1.transform.position.x;
-        }
+            fDistanceX = 0.0f;
+            fDistanceY = 0.0f;
 
-        // distance between players Y
-        if (Player1.transform.position.y > Player2.transform.position.y)
-        {
-            fDistanceY = Player1.transform.position.y - Player2.transform.position.y;
+            positionToMoveTo = new Vector3(finishLine.transform.position.x, finishLine.transform.position.y + 1, -10);
         }
-        else
-        {
-            fDistanceY = Player2.transform.position.y - Player1.transform.position.y;
-        }
-
-        positionToMoveTo = new Vector3((Player1.transform.position.x + Player2.transform.position.x) / 2 + 4, (Player1.transform.position.y + Player2.transform.position.y) / 2, -10);
 
         // use largest distace to scale screen
         if (fDistanceX > fDistanceY)

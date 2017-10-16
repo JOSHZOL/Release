@@ -7,7 +7,7 @@ public class FinishScript : MonoBehaviour {
 
     bool bPlayer1 = false;
     bool bPlayer2 = false;
-    bool bTouched = false;
+    public bool bTouched = false;
     public GameObject particles;
     public AudioSource win;
 
