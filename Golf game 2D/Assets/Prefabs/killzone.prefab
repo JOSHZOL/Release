@@ -130,6 +130,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 555bba88265cba849a1bcb59d269464e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpawnController: {fileID: 0}
+  deathPartical: {fileID: 0}
+  death: {fileID: 0}
 --- !u!212 &212550592020495332
 SpriteRenderer:
   m_ObjectHideFlags: 1

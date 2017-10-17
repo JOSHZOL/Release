@@ -41,13 +41,16 @@ public class FinishScript : MonoBehaviour {
                 win.Play();
                 bTouched = true;
 
-                if (collision.tag == "Player2")
+                if (collision.GetComponent<PlayerController>().jumpButton != "space")
                 {
-                    GameObject.Find("Score").GetComponent<ScoreScript>().iAddScore(true);
-                }
-                else
-                {
-                    GameObject.Find("Score").GetComponent<ScoreScript>().iAddScore(false);
+                    if (collision.tag == "Player2")
+                    {
+                        GameObject.Find("Score").GetComponent<ScoreScript>().iAddScore(true);
+                    }
+                    else
+                    {
+                        GameObject.Find("Score").GetComponent<ScoreScript>().iAddScore(false);
+                    }
                 }
             }
 
