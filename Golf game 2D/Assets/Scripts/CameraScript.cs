@@ -44,7 +44,7 @@ public class CameraScript : MonoBehaviour {
 
         fStartTime += Time.deltaTime;
 
-        if(Input.GetKeyDown("s") || Input.GetKeyDown("k"))
+        if(Input.GetKeyDown("s") || Input.GetKeyDown("k") || Input.GetKeyDown("space"))
         {
             fCamSpeed = fFinalCamSpeed;
             fProximitySlowDown = 1000;

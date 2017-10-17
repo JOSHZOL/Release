@@ -45,27 +45,6 @@ public class PlayerController : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        //if (transform.eulerAngles.z < 1.01f && transform.eulerAngles.z > -1.01)
-        //{
-
-        //}
-        //else
-        //{
-        //    if (transform.eulerAngles.z > 360.0f || transform.eulerAngles.z < -360)
-        //    {
-        //        transform.Rotate(0, 0, 0);
-        //    }
-
-        //    if (transform.eulerAngles.z > 180.01f)
-        //    {
-        //        transform.Rotate(Vector3.forward * (100 * Time.deltaTime));
-        //    }
-        //    else if (transform.eulerAngles.z < 180.01f)
-        //    {
-        //        transform.Rotate(Vector3.back * (100 * Time.deltaTime));
-        //    }
-        //} 
-        
         if (GetComponent<Animator>().GetBool("Land"))
         {
             fTimePassed += Time.deltaTime;
@@ -117,9 +96,9 @@ public class PlayerController : MonoBehaviour {
         {
             if (Input.GetKeyUp(jumpButton))
             {
-                Instantiate(sugarDrop, transform.position, Quaternion.identity);
+                Instantiate(sugarDrop, new Vector3(transform.position.x, transform.position.y - 0.25f, transform.position.z), Quaternion.identity);
                 //sugarDrop.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-                sugarDrop.GetComponent<Rigidbody2D>().AddForce(Vector3.down * sugarForce);
+                sugarDrop.GetComponent<Rigidbody2D>().AddForce(Vector3.up * sugarForce);
             }
         }
         
