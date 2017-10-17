@@ -89,7 +89,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 11, y: 6.76}
+    oldSize: {x: 11.01, y: 6.9}
     newSize: {x: 35.079998, y: 24.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -114,7 +114,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 11, y: 6.76}
+    oldSize: {x: 11.01, y: 6.9}
     newSize: {x: 35.079998, y: 24.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bTouched: 0
-  particles: {fileID: 0}
+  particles: {fileID: 1502401682068688, guid: bcf8fc49e4a55e64d9efb8bd07c1a953, type: 2}
   win: {fileID: 0}
   sceneToChangeTo: Level2
 --- !u!212 &212377143578026066

@@ -1,7 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Golf game 2D", "Assembly-CSharp.csproj", "{C699FBE4-6AEE-4070-3713-289537C41D15}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Golf game 2D", "Golf game 2D.csproj", "{97C96F55-779F-E795-7D24-D063629F9769}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C699FBE4-6AEE-4070-3713-289537C41D15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C699FBE4-6AEE-4070-3713-289537C41D15}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C699FBE4-6AEE-4070-3713-289537C41D15}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C699FBE4-6AEE-4070-3713-289537C41D15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97C96F55-779F-E795-7D24-D063629F9769}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97C96F55-779F-E795-7D24-D063629F9769}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97C96F55-779F-E795-7D24-D063629F9769}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97C96F55-779F-E795-7D24-D063629F9769}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal

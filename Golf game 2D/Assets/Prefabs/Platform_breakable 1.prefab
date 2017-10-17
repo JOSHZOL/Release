@@ -93,7 +93,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 11.97, y: 5.34}
+    oldSize: {x: 11.97, y: 4.97}
     newSize: {x: 18.9, y: 14.17}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -118,7 +118,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 11.97, y: 5.34}
+    oldSize: {x: 11.97, y: 4.97}
     newSize: {x: 18.9, y: 14.17}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -302,8 +302,8 @@ MonoBehaviour:
   fTimeRespawn: 2
   goTrapPlat: {fileID: 1167600077754242}
   daBox: {fileID: 61453825835368944}
-  platLight: {fileID: 21300000, guid: 1b9aa53c4a5fe55499f863f519e75a28, type: 3}
-  platDark: {fileID: 21300000, guid: a49a92d07fc518d46b30669bf761d908, type: 3}
+  platLight: {fileID: 21300000, guid: 5bc678641e7f5834c986874f76b12ff2, type: 3}
+  platDark: {fileID: 21300000, guid: 7b2cd8dcd5a7e2d4088e4c089b4948aa, type: 3}
   rocks: {fileID: 82878381518792156}
   particles: {fileID: 1065328808454596}
 --- !u!114 &114947205068284566
