@@ -9718,7 +9718,7 @@ Prefab:
     - target: {fileID: 114960659038369468, guid: 887f3855fd8caa8458c162e961971a09,
         type: 2}
       propertyPath: sceneToChangeTo
-      value: SPL2
+      value: SPL3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 887f3855fd8caa8458c162e961971a09, type: 2}

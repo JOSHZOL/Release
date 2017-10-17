@@ -6474,7 +6474,7 @@ MonoBehaviour:
   force: 0
   sugarForce: 0
   bJumpReady: 0
-  jumpButton: s
+  jumpButton: space
   bCanMove: 1
 --- !u!50 &1531855751
 Rigidbody2D:
