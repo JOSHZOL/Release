@@ -4,22 +4,25 @@ using UnityEngine;
 
 public class SugarScript : MonoBehaviour {
 
+    float fDeadTimer;
+
 	// Use this for initialization
 	void Start () {
-		
+        fDeadTimer = 0.0f;
 	}
 	
 	// Update is called once per frame
 	void Update ()
-    {   
-		
+    {
+        fDeadTimer += Time.deltaTime;
+
+        if (fDeadTimer > 5.0f)
+        {
+            Destroy(gameObject);
+        }
 	}
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player" || collision.tag == "Player2")
-        {
-            print("collide");
-        }
     }
 }

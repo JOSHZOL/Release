@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour {
         dead = false;
         shakeAmt = 0;
         fTimePassed = 0.0f;
-        fDelay = 0.0f;
+        fDelay = 3.0f;
         //startY = mainCamera.transform.position.y;
     }
 
@@ -92,13 +92,13 @@ public class PlayerController : MonoBehaviour {
 
             power.value = force;
         }
-        else if (!bJumpReady && bCanMove && rb != null)
+        else if (!bJumpReady && bCanMove && rb != null && fDelay > 1.5f)
         {
             if (Input.GetKeyUp(jumpButton))
             {
                 Instantiate(sugarDrop, new Vector3(transform.position.x, transform.position.y - 0.25f, transform.position.z), Quaternion.identity);
-                //sugarDrop.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
                 sugarDrop.GetComponent<Rigidbody2D>().AddForce(Vector3.up * sugarForce);
+                fDelay = 0.0f;
             }
         }
         
