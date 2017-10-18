@@ -1888,6 +1888,10 @@ Prefab:
       propertyPath: m_Name
       value: Push_fan_particle (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1302098984846876, guid: 1b8e9b4b08a5bbf4790306530658cf02, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b8e9b4b08a5bbf4790306530658cf02, type: 2}
   m_IsPrefabParent: 0
@@ -3483,12 +3487,12 @@ Prefab:
         type: 2}
       propertyPath: pull
       value: 
-      objectReference: {fileID: 1802067670}
+      objectReference: {fileID: 1014005236}
     - target: {fileID: 114272047389180126, guid: b02b7f55e58515546ba03f7c3f05db97,
         type: 2}
       propertyPath: push
       value: 
-      objectReference: {fileID: 1014005236}
+      objectReference: {fileID: 1802067670}
     - target: {fileID: 114272047389180126, guid: b02b7f55e58515546ba03f7c3f05db97,
         type: 2}
       propertyPath: delaysize
@@ -4249,7 +4253,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1423134139155998, guid: 565d032b5270579418ad7faf362a880f, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 565d032b5270579418ad7faf362a880f, type: 2}

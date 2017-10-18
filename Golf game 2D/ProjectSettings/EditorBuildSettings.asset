@@ -55,4 +55,7 @@ EditorBuildSettings:
     guid: 0ac7a813893bc8e439175b90a4ae5186
   - enabled: 1
     path: Assets/Scenes/SPL6.unity
+    guid: e23d2caf1ce821540a9ce76b2c595fb5
+  - enabled: 1
+    path: Assets/Scenes/WinSP.unity
     guid: 00000000000000000000000000000000
