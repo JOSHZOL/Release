@@ -14,6 +14,7 @@ public class TrapPlatScript : MonoBehaviour {
     public Sprite platDark;
     public AudioSource rocks;
     public GameObject particles;
+
     // Use this for initialization
     void Start () {
 		
@@ -31,6 +32,8 @@ public class TrapPlatScript : MonoBehaviour {
             // GameObject.Find("bc_floating2").GetComponent<BoxCollider2D>().enabled = false;
             daBox.enabled = false;
             goTrapPlat.GetComponent<SpriteRenderer>().sprite = platDark;
+            GetComponent<Animator>().SetBool("Start", false);
+            GetComponent<Animator>().enabled = false;
         }
         if (fTimePassed >= fTimeDrop + fTimeRespawn)
         {
@@ -48,5 +51,7 @@ public class TrapPlatScript : MonoBehaviour {
         rocks.Play();
         isTrue = true;
         particles.SetActive(true);
+        GetComponent<Animator>().enabled = true;
+        GetComponent<Animator>().SetBool("Start", true);
     }
 }

@@ -328,7 +328,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &113746184
 GameObject:
@@ -397,7 +397,7 @@ Transform:
   m_LocalScale: {x: 2.67, y: 2.67, z: 0.6385177}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &115754231
 GameObject:
@@ -432,7 +432,7 @@ Transform:
   - {fileID: 1602546460}
   - {fileID: 474940935}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &119779025
 Prefab:
@@ -1211,7 +1211,7 @@ Transform:
   m_Children:
   - {fileID: 286354602}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &215109929 stripped
 GameObject:
@@ -2066,7 +2066,7 @@ Transform:
   - {fileID: 1758002972}
   - {fileID: 1531855747}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &573870685 stripped
 GameObject:
@@ -2417,7 +2417,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2eea9f8d767d01149b2fdc48798f55bd, type: 3}
-  m_Color: {r: 0.59607846, g: 0.5647059, b: 0.4784314, a: 1}
+  m_Color: {r: 0.5686275, g: 0.5176471, b: 0.40000004, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2750,7 +2750,7 @@ Transform:
   m_Children:
   - {fileID: 2116620767}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &712784278 stripped
 GameObject:
@@ -3188,7 +3188,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4310847654945786, guid: 93fcf12d7bde6c8429f325099ef77a9b, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1963101626139800, guid: 93fcf12d7bde6c8429f325099ef77a9b, type: 2}
       propertyPath: m_IsActive
@@ -5991,7 +5991,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2eea9f8d767d01149b2fdc48798f55bd, type: 3}
-  m_Color: {r: 0.59607846, g: 0.5647059, b: 0.4784314, a: 1}
+  m_Color: {r: 0.5686275, g: 0.5176471, b: 0.40000004, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6009,7 +6009,7 @@ Transform:
   m_LocalScale: {x: 2.080164, y: 1.9195187, z: 5.043118}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1418608933
 Prefab:
@@ -6135,7 +6135,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2eea9f8d767d01149b2fdc48798f55bd, type: 3}
-  m_Color: {r: 0.59607846, g: 0.5647059, b: 0.4784314, a: 1}
+  m_Color: {r: 0.5686275, g: 0.5176471, b: 0.40000004, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6982,7 +6982,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2eea9f8d767d01149b2fdc48798f55bd, type: 3}
-  m_Color: {r: 0.59607846, g: 0.5647059, b: 0.4784314, a: 1}
+  m_Color: {r: 0.5686275, g: 0.5176471, b: 0.40000004, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7000,7 +7000,7 @@ Transform:
   m_LocalScale: {x: 2.080164, y: 1.9195187, z: 5.043118}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1622877847
 Prefab:
@@ -7509,7 +7509,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2eea9f8d767d01149b2fdc48798f55bd, type: 3}
-  m_Color: {r: 0.59607846, g: 0.5647059, b: 0.4784314, a: 1}
+  m_Color: {r: 0.5686275, g: 0.5176471, b: 0.40000004, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8839,7 +8839,7 @@ Transform:
   m_Children:
   - {fileID: 1767801024}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2028592540 stripped
 GameObject:
@@ -9050,7 +9050,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2eea9f8d767d01149b2fdc48798f55bd, type: 3}
-  m_Color: {r: 0.59607846, g: 0.5647059, b: 0.4784314, a: 1}
+  m_Color: {r: 0.5686275, g: 0.5176471, b: 0.40000004, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9119,7 +9119,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2eea9f8d767d01149b2fdc48798f55bd, type: 3}
-  m_Color: {r: 0.59607846, g: 0.5647059, b: 0.4784314, a: 1}
+  m_Color: {r: 0.5686275, g: 0.5176471, b: 0.40000004, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

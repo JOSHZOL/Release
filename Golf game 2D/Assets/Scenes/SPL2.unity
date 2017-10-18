@@ -181,7 +181,7 @@ Transform:
   - {fileID: 1363666395}
   - {fileID: 2037711066}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &30382125
 Prefab:
@@ -1037,7 +1037,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2eea9f8d767d01149b2fdc48798f55bd, type: 3}
-  m_Color: {r: 0.59607846, g: 0.5647059, b: 0.4784314, a: 1}
+  m_Color: {r: 0.5686275, g: 0.5176471, b: 0.40000004, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1055,7 +1055,7 @@ Transform:
   m_LocalScale: {x: 2.080164, y: 1.9195187, z: 5.043118}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &279184497 stripped
 Transform:
@@ -1245,7 +1245,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2eea9f8d767d01149b2fdc48798f55bd, type: 3}
-  m_Color: {r: 0.59607846, g: 0.5647059, b: 0.4784314, a: 1}
+  m_Color: {r: 0.5686275, g: 0.5176471, b: 0.40000004, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1263,7 +1263,7 @@ Transform:
   m_LocalScale: {x: 0.27631497, y: 1.9195187, z: 5.043118}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &361350245
 Prefab:
@@ -2136,7 +2136,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &545926995 stripped
 Transform:
@@ -2379,7 +2379,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2eea9f8d767d01149b2fdc48798f55bd, type: 3}
-  m_Color: {r: 0.59607846, g: 0.5647059, b: 0.4784314, a: 1}
+  m_Color: {r: 0.5686275, g: 0.5176471, b: 0.40000004, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3103,7 +3103,7 @@ Transform:
   m_Children:
   - {fileID: 974038356}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &818039313 stripped
 GameObject:
@@ -4899,7 +4899,7 @@ Transform:
   - {fileID: 1814442189}
   - {fileID: 248243727}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -2.96}
 --- !u!1001 &1334751459
 Prefab:
@@ -5888,7 +5888,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2eea9f8d767d01149b2fdc48798f55bd, type: 3}
-  m_Color: {r: 0.59607846, g: 0.5647059, b: 0.4784314, a: 1}
+  m_Color: {r: 0.5686275, g: 0.5176471, b: 0.40000004, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6005,7 +6005,7 @@ Transform:
   m_Children:
   - {fileID: 765706209}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1683233494
 Prefab:
@@ -9814,7 +9814,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2eea9f8d767d01149b2fdc48798f55bd, type: 3}
-  m_Color: {r: 0.59607846, g: 0.5647059, b: 0.4784314, a: 1}
+  m_Color: {r: 0.5686275, g: 0.5176471, b: 0.40000004, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9832,7 +9832,7 @@ Transform:
   m_LocalScale: {x: 0.27631497, y: 1.9195187, z: 5.043118}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1956194690 stripped
 Transform:
@@ -10151,7 +10151,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2eea9f8d767d01149b2fdc48798f55bd, type: 3}
-  m_Color: {r: 0.59607846, g: 0.5647059, b: 0.4784314, a: 1}
+  m_Color: {r: 0.5686275, g: 0.5176471, b: 0.40000004, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -10169,7 +10169,7 @@ Transform:
   m_LocalScale: {x: 2.080164, y: 1.9195187, z: 5.043118}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2065290578
 Prefab:
